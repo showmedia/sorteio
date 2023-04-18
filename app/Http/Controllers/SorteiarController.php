@@ -142,7 +142,7 @@ class SorteiarController extends Controller
 
         foreach($users as $user){
 
-            if($user->id != 108 && $user->name != $primeiro && $user->name != $segundo){
+            if($user->id != 108 && $user->id != 1 && $user->name != $primeiro && $user->name != $segundo){
 
                 $cont = 0;
 
