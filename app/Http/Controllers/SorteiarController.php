@@ -92,7 +92,7 @@ class SorteiarController extends Controller
 
 
 
-            if($user->id != 108){
+            if($user->id != 108 && $user->id != 1){
 
                 $cont = 0;
 
