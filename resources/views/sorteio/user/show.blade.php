@@ -308,7 +308,7 @@
                     @if($sorteio->qtnCotas <= $sorteio->qtnVenda)
                         <button class="bg-danger">Encerrado <span id="comprar"></span></button>
                     @else 
-                        <button disabled class="bg-success">Comprar <span id="comprar"></span></button>
+                        <button disabled class="bg-success disabled">Comprar <span id="comprar"></span></button>
                     @endif
                 </div>
 
