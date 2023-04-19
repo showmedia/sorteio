@@ -306,7 +306,7 @@
 
                 <div class="input-botao">
                     @if($sorteio->qtnCotas <= $sorteio->qtnVenda)
-                        <button class="bg-danger disabled">Encerrado <span id="comprar"></span></button>
+                        <button type="button" disabled class="bg-danger disabled">Encerrado <span id="comprar"></span></button>
                     @else 
                         <button class="bg-success">Comprar <span id="comprar"></span></button>
                     @endif
