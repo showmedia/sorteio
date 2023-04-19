@@ -123,14 +123,14 @@ Compre agora!
 
                             <!-- Adicionar lista de ganhadores dos ultimos sorteios -->
                             @php 
-    $cont = 1;
+    $cont = 0;
 @endphp
          
                             @foreach($sorteios as $sorteio)
                             @php 
                                 $cont++;
                             @endphp
-                       @if($sorteio->status == 1 && $cont == 1)
+                       @if($sorteio->status == 1)
 
                                 <div class="vencedor">
 
@@ -138,8 +138,9 @@ Compre agora!
 
            <span> {{$sorteio->sorteado}}</span>
 
+           @if($cont == 1)
            <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio">
-
+@endif
             </div>
 
                                 @endif
