@@ -122,10 +122,15 @@ Compre agora!
                             </div>
 
                             <!-- Adicionar lista de ganhadores dos ultimos sorteios -->
-
+                            @php 
+    $cont = 1;
+@endphp
+         
                             @foreach($sorteios as $sorteio)
-
-                                @if($sorteio->status == 1)
+                            @php 
+                                $cont++;
+                            @endphp
+                       @if($sorteio->status == 1 && $cont == 1)
 
                                 <div class="vencedor">
 
