@@ -46,19 +46,19 @@ class SorteiarController extends Controller
 
                     $venda = $cota->venda;
 
-<<<<<<< HEAD
+
                     if($venda->user->id == 108 || $venda->user->id){
 
                         $notas = Nota::whereDate([
                             ['created_at', '>', '2023-04-16']
                         ])->get();
-=======
+
                     if($venda->user->id == 108 || $venda->user->id == 1){
                         
                         $notas = Nota::whereDate(
                             'created_at', '>', '2023-04-16'
                         )->get();
->>>>>>> 1685f13f6a646dce0ba0b9c97b5aa260ff98cfde
+
 
                         foreach($notas as $nota){
 
@@ -187,6 +187,7 @@ class SorteiarController extends Controller
 
 
     }
+}
 
 
 
