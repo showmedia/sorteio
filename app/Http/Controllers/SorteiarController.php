@@ -46,19 +46,11 @@ class SorteiarController extends Controller
 
                     $venda = $cota->venda;
 
-
-                    if($venda->user->id == 108 || $venda->user->id){
-
-                        $notas = Nota::whereDate([
-                            ['created_at', '>', '2023-04-16']
-                        ])->get();
-
                     if($venda->user->id == 108 || $venda->user->id == 1){
                         
                         $notas = Nota::whereDate(
                             'created_at', '>', '2023-04-16'
                         )->get();
-
 
                         foreach($notas as $nota){
 
@@ -90,6 +82,11 @@ class SorteiarController extends Controller
 
          $users = User::all();
 
+        $pri = 0;
+
+        $seg = 0;
+
+        $terc = 0;
 
         foreach($users as $user){
 
@@ -119,6 +116,56 @@ class SorteiarController extends Controller
 
         }
 
+        foreach($users as $user){
+
+            if($user->id != 108 && $user->id != 1 && $user->name != $primeiro){
+
+                $cont = 0;
+
+                foreach($user->compras as $compra){
+
+                    $cont = $cont + count($compra->cotas);
+
+                }
+
+                if($cont > $seg){
+
+                    $seg = $cont;
+
+                    $segundo = $compra->user->name;
+
+                }
+
+            }
+
+        }
+
+        foreach($users as $user){
+
+            if($user->id != 108 && $user->id != 1 && $user->name != $primeiro && $user->name != $segundo){
+
+                $cont = 0;
+
+                foreach($user->compras as $compra){
+
+                    $cont = $cont + count($compra->cotas);
+
+                }
+
+                if($cont > $terc){
+
+                    $terc = $cont;
+
+                    $terceiro = $compra->user->name;
+
+                }
+
+            }
+
+        }
+ 
+
+
         if($vencedor == ''){
 
             $vencedor = 'Ninguém comprou a cota '.$request->cota;
@@ -127,12 +174,11 @@ class SorteiarController extends Controller
 
 
 
-        return view('sorteio.sortear', ['vencedor' => $vencedor,'cota'=>$request->cota]);
+        return view('sorteio.sortear', ['vencedor' => $vencedor,'cota'=>$request->cota, 'pri' => $pri, 'seg' => $seg, 'terc' => $terc, 'primeiro' => $primeiro, 'segundo' => $segundo, 'terceiro' => $terceiro, 'sorteio' => $sorteio]);
 
 
 
     }
-}
 
 
 
@@ -161,4 +207,3 @@ class SorteiarController extends Controller
     }
 
 }
-
