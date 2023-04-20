@@ -88,7 +88,7 @@
 
                                    @else
 
-                                        <div class="ct">{{sprintf("%04s",$cota->number)}}</div>
+                                        <div class="ct">{{sprintf("%03s",$cota->number)}}</div>
 
                                     @endif
 
