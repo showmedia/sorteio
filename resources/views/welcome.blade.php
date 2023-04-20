@@ -140,7 +140,10 @@ Compre agora!
 
            @if($cont == 1)
            <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio">
-@endif
+            @elseif($cont == 2)
+            <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do primeiro sorteio">
+
+            @endif
             </div>
 
                                 @endif
