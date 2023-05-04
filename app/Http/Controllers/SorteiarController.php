@@ -49,7 +49,7 @@ class SorteiarController extends Controller
                     if($venda->user->id == 108 || $venda->user->id == 1){
                         
                         $notas = Nota::whereDate(
-                            'created_at', '>', '2023-04-16'
+                            'created_at', '>', '2023-04-30'
                         )->get();
 
                         foreach($notas as $nota){
