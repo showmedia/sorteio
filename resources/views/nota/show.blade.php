@@ -154,7 +154,7 @@
 
     </form>
 
-    <a href="/nota" class="btn btn-success" style="position:absolute; right: 50px; bottom: 50px;">Cadastrar Novo</a>
+    <a href="/nota" class="btn btn-success" style="position:absolute; right: 50px; bottom: 30px;">Cadastrar Novo</a>
 
 </div>
 
