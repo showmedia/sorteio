@@ -144,6 +144,8 @@
 
                 </button>
 
+
+
             </div>
 
         </div>
@@ -151,6 +153,8 @@
         
 
     </form>
+
+    <a href="/nota" class="btn btn-success" style="position:absolute; right: 50px; bottom: 50px;">Cadastrar Novo</a>
 
 </div>
 
