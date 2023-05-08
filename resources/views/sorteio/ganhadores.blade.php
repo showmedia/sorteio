@@ -55,6 +55,8 @@
             <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do primeiro sorteio">
             @elseif($cont == 3)
             <img src="/img/sorteio3.jpg" alt="imagem do ganhador do terceiro sorteio">
+            @elseif($cont == 4)
+            <img src="/img/sorteio4.jpg" alt="imagem do ganhador do quarto sorteio">
             @endif
 
             </div>
