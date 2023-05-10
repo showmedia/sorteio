@@ -55,6 +55,11 @@ class VendaController extends Controller
         
 
         $venda->quantidade = $qtn;
+
+        if($qtn > $sorteio->qtnCotas - $sorteio->qtnVenda){
+            return redirect('/')->with('msg', 'Desculpe, mas só tem disponível apenas ' . $sorteio->qtnCotas - $sorteio->qtnVenda . 'cotas.');
+        }
+
 $vendidos = array();
 
 // Popula o array $vendidos com todas as cotas já vendidas
@@ -70,8 +75,6 @@ if ($sorteio->vendas) {
 
 // Gera um array com todos os números de cota disponíveis
 $disponiveis = array_diff(range($sorteio->inicial, $sorteio->final), $vendidos);
-
-return count($vendidos);
 
 for ($i = 0; $i < $qtn; $i++) {
 
