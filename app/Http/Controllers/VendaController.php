@@ -71,7 +71,7 @@ if ($sorteio->vendas) {
 // Gera um array com todos os números de cota disponíveis
 $disponiveis = array_diff(range($sorteio->inicial, $sorteio->final), $vendidos);
 
-return $disponiveis;
+return count($vendidos);
 
 for ($i = 0; $i < $qtn; $i++) {
 
