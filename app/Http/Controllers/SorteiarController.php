@@ -24,7 +24,7 @@ class SorteiarController extends Controller
 
     public function pesquisar(Request $request){
 
-        $sorteio = Sorteio::findOrFail(4);
+        $sorteio = Sorteio::findOrFail(5);
 
         $vencedor = null;
 
@@ -47,7 +47,7 @@ class SorteiarController extends Controller
                     if($venda->user->id == 108 || $venda->user->id == 1){
                         
                         $notas = Nota::whereDate(
-                            'created_at', '>', '2023-04-30'
+                            'created_at', '>', '2023-05-05'
                         )->get();
 
                         foreach($notas as $nota){
