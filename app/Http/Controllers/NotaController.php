@@ -134,8 +134,16 @@ class NotaController extends Controller
 
     }
 
-    public function limpart(){
+    public function limpar(){
+        $notas = Nota::all();
+        foreach($notas as $nota){
+            foreach($nota->numeros as $num){
+                $num->delete();
+            }
+            $nota->delete();
+        }
         return 'teste';
+        return redirect('/notas')->with('msg', 'Todas notas foram deletadas!');
     }
 
 
