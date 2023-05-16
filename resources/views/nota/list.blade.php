@@ -148,8 +148,10 @@
 
                         </table>
 
-
-
-           <a href="/notes/deletar" class="btn btn-sm btn-danger">Limpar Talão</a>
-
+<br><br>
+<form action="/notes/deletar" method="post">
+  @csrf
+  @method('delete')
+           <button class="btn btn-sm btn-danger">Limpar Talão</button>
+           </form>
 @endsection
