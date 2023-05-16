@@ -144,7 +144,12 @@
 
                 </button>
 
-
+            <script>
+              window.addEventListener('DOMContentLoaded', function() {
+                    var inputElement = document.getElementById('cota');
+                    inputElement.focus();
+                  });
+            </script>
 
             </div>
 
