@@ -94,7 +94,7 @@ class NotaController extends Controller
 
         $numero->numero = $request->cota;
 
-        $japossui = Nota::where([
+        $japossui = Numero::where([
             ['numero', $request->cota]
         ])->get();
 
