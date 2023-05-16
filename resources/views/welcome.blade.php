@@ -139,15 +139,15 @@ Compre agora!
            <span> {{$sorteio->sorteado}}</span>
 
            @if($cont == 1)
-           <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio">
+                <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio">
             @elseif($cont == 2)
-            <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do segundo sorteio">
+                <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do segundo sorteio">
             @elseif($cont == 3)
-            <img src="/img/sorteio3.jpg" alt="imagem do ganhador do terceiro sorteio">
+                <img src="/img/sorteio3.jpg" alt="imagem do ganhador do terceiro sorteio">
             @elseif($cont == 4)
-            <img src="/img/sorteio4.jpg" alt="imagem do ganhador do quarto sorteio">
+                <img src="/img/sorteio4.jpg" alt="imagem do ganhador do quarto sorteio">
             @elseif($cont == 5)
-            <img src="/img/sorteio5.jpg" alt="imagem do ganhador do quarto sorteio">
+                <img src="/img/sorteio5.jpg" alt="imagem do ganhador do quarto sorteio">
             @endif
             </div>
 
