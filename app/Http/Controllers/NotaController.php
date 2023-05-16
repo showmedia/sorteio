@@ -142,7 +142,6 @@ class NotaController extends Controller
             }
             $nota->delete();
         }
-        return 'teste';
         return redirect('/notas')->with('msg', 'Todas notas foram deletadas!');
     }
 
