@@ -150,6 +150,6 @@
 
 
 
-           
+           <a href="/notes/deletar" class="btn btn-sm btn-danger">Limpar Talão</a>
 
 @endsection
