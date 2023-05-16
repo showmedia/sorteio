@@ -94,11 +94,19 @@ class NotaController extends Controller
 
         $numero->numero = $request->cota;
 
+        $japossui = Nota::where([
+            ['numero', $request->cota]
+        ])->get();
+
+        if(count($japossui) > 0){
+            return redirect('/nota/'.$nota->id)->with('msg', 'Essa cota já foi adicionada no talão');
+        }
+
         $numero->notas_id = $nota->id;
 
         $numero->save();
 
-        return redirect('nota/'.$nota->id)->with('msg', 'Cota adicionada com sucesso');
+        return redirect('/nota/'.$nota->id)->with('msg', 'Cota adicionada com sucesso');
 
     }
 
