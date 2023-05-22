@@ -167,7 +167,20 @@ $disponiveis = array_values($disponiveis);
 
     }
 
-
+    public function limparcompras($id){
+        $user = User::findOrFail($id);
+        if($user->nivel == 1){
+            foreach($user->compras as $compra){
+                if($compra->sorteio->status == 1){
+                    foreach($compra->cotas as $cota){
+                        $cota->delete();
+                    }
+                    $compra->delete();
+                }
+            }
+        }
+        return redirect("/meusnumeros")->with('msg', 'todas suas compras foram deletadas!');
+    }
 
     public function pagou($id){
 

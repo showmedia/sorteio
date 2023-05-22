@@ -130,6 +130,8 @@ Route::get('/parceiros', function(){
 
 });
 
+Route::delete('/compras/deletar/{id}', [VendaController::class, 'limparcompras'])->middleware('auth');
+
 
 
 Route::get('/contato', [ContatoController::class, 'show']);

@@ -21,6 +21,12 @@
                             <small> Meus Númemros</small>
 
                             </span>
+                            @if(Auth::user()->nivel == 1)
+                                <form action="/compras/deletar/{{Auth::user()->id}}" method="post">
+                                    @method('DELETE')
+                                    <button class="btn btn-sm btn-danger">Limpar todas Compras</button>
+                                </form>
+                            @endif
 
                         </div>
 
