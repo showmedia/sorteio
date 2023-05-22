@@ -148,6 +148,8 @@ Compre agora!
                 <img src="/img/sorteio4.jpg" alt="imagem do ganhador do quarto sorteio">
             @elseif($cont == 5)
                 <img src="/img/sorteio5.jpg" alt="imagem do ganhador do quarto sorteio">
+            @elseif($cont == 6)
+                <img src="/img/sorteio6.jpg" alt="imagem do sexto sorteio">
             @endif
             </div>
 
