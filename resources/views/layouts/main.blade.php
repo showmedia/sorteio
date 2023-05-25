@@ -170,7 +170,7 @@
 
     <footer>
 
-        <p>Galdino e Filho Premiações - &copy;2022</p>
+        <p>Galdino e Filho Premiações - &copy;2022 - Desenvolvido por <a href="https://instagram.com/showmediaart" target="_blank" rel="noopener noreferrer">Show Media</a></p>
 
     </footer>
 

@@ -24,7 +24,7 @@ class SorteiarController extends Controller
 
     public function pesquisar(Request $request){
 
-        $sorteio = Sorteio::findOrFail(7);
+        $sorteio = Sorteio::findOrFail(8);
 
         $vencedor = null;
 
