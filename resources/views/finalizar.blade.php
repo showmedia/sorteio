@@ -74,7 +74,7 @@
 
         <div class="input">
 
-            <input type="text" id="qr_code_text" style="height:200px; word-wrap: break-word; white-space: pre-wrap;" value="{{$pag->point_of_interaction->transaction_data->qr_code ?? ''}}">
+            <textarea id="qr_code_text" style="height:200px; word-wrap: break-word; white-space: pre-wrap;">{{$pag->point_of_interaction->transaction_data->qr_code ?? ''}}</textarea>
 
         </div>
 
