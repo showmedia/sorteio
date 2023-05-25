@@ -72,14 +72,14 @@
 
     <div class="copia-cola">
 
-        <div class="input">
+        <div class="input" style="width: 100%;">
 
-            <textarea id="qr_code_text" style="height:200px; word-wrap: break-word; white-space: pre-wrap;">{{$pag->point_of_interaction->transaction_data->qr_code ?? ''}}</textarea>
+            <textarea id="qr_code_text" style="height:100px; width:100% word-wrap: break-word; white-space: pre-wrap;">{{$pag->point_of_interaction->transaction_data->qr_code ?? ''}}</textarea>
 
         </div>
 
-        <button id="btn-copia" class="btn-copiar" data-clipboard-target="#qr_code_text"><ion-icon name="documents-outline"></ion-icon></button>
-
+       <!--  <button id="btn-copia" class="btn-copiar" data-clipboard-target="#qr_code_text"><ion-icon name="documents-outline"></ion-icon></button>
+ -->
     </div>
 
    @endif
