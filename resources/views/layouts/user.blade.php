@@ -36,7 +36,7 @@
 
         
 
-        <link rel="stylesheet" href="/css/style-user.css">
+        <link rel="stylesheet" href="/css/style-user.css?v=2">
 
         @yield('css')
 
