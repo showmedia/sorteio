@@ -166,7 +166,7 @@
 
 
 
-        <div class="rodape">
+        <div class="rodape" style="z-index: 9999;">
 
             <div class="grupo-whats"></div>
 
