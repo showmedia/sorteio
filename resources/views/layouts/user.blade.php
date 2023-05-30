@@ -54,7 +54,7 @@
 
 
 
-    <body style="padding-bottom: 250px;">
+    <body style="padding-bottom: 600px;">
 
             <header>
 
@@ -112,7 +112,7 @@
 
     </main>
 
-        <footer style="margin-top: 200px;">
+        <footer>
 
             <div class="row">
 
