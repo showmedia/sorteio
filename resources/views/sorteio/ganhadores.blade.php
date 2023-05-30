@@ -62,7 +62,7 @@
             @elseif($cont == 6)
                 <img src="/img/sorteio6.jpg" alt="imagem do sexto sorteio">
             @elseif($cont == 7)
-                <img src="/img/sorteio7.jpg" alt="imagem do setimo sorteio">
+                <img src="/img/sorteio7.jpeg" alt="imagem do setimo sorteio">
             @endif
 
             </div>
