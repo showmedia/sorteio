@@ -36,7 +36,7 @@
 
         
 
-        <link rel="stylesheet" href="/css/style-user.css?v=2">
+        <link rel="stylesheet" href="/css/style-user.css?v=3">
 
         @yield('css')
 
@@ -112,7 +112,7 @@
 
     </main>
 
-        <footer style="margin-top: 500px;">
+        <footer style="margin-top: 200px;">
 
             <div class="row">
 
