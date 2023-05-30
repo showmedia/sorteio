@@ -54,7 +54,7 @@
 
 
 
-    <body style="padding-bottom: 200px;">
+    <body style="padding-bottom: 250px;">
 
             <header>
 
@@ -209,10 +209,6 @@
                 </div>
 
             </div>
-
-            <br>
-            <p class="text-center" style="padding:5px;">Galdino e Filho Premiações - &copy;2022 - Desenvolvido por <a href="https://instagram.com/showmediaart" target="_blank" rel="noopener noreferrer">Show Media</a></p>
-
 
         </footer>
 
