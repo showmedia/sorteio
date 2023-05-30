@@ -112,7 +112,7 @@
 
     </main>
 
-        <footer>
+        <footer style="margin-top: 250px;">
 
             <div class="row">
 
