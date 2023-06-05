@@ -151,13 +151,12 @@ $disponiveis = array_values($disponiveis);
 
 
 
-        Mail::to($venda->user->email)->send(new CompraCota($venda));
+    /*     Mail::to($venda->user->email)->send(new CompraCota($venda));
 
         Mail::to('gfpremios.gma@gmail.com')->send(new VendaFeita($venda));
 
 
-
-       
+   */
 
 
 
