@@ -33,6 +33,8 @@ class SorteiarController extends Controller
         $segundo = null;
 
         $terceiro = null; 
+        $notavenc = null;
+        $uservenc = null;
 
         $venda = new Venda;
 
@@ -57,6 +59,7 @@ class SorteiarController extends Controller
                                 if($numero->numero == intval($request->cota)){
 
                                     $vencedor = $nota->name;
+                                    $notavenc = $nota;
 
                                 }
 
@@ -67,7 +70,7 @@ class SorteiarController extends Controller
                     }else{
 
                         $vencedor = $venda->user->name;
-
+                        $uservenc = $venda->user;
                     }
 
                 }
@@ -172,7 +175,7 @@ class SorteiarController extends Controller
 
 
 
-        return view('sorteio.sortear', ['vencedor' => $vencedor,'cota'=>$request->cota, 'pri' => $pri, 'seg' => $seg, 'terc' => $terc, 'primeiro' => $primeiro, 'segundo' => $segundo, 'terceiro' => $terceiro, 'sorteio' => $sorteio]);
+        return view('sorteio.sortear', ['notavenc' => $notavenc, 'uservenc' => $uservenc,  'vencedor' => $vencedor,'cota'=>$request->cota, 'pri' => $pri, 'seg' => $seg, 'terc' => $terc, 'primeiro' => $primeiro, 'segundo' => $segundo, 'terceiro' => $terceiro, 'sorteio' => $sorteio]);
 
 
 
