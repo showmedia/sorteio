@@ -12,7 +12,7 @@
 
 <div class="text-center">
 
-{{$sorteio->name}} {{$notavenc->telefone ?? ''}} {{$uservenc->telefone ?? ''}}
+{{$sorteio->name}} {{$notavenc->phone ?? ''}} {{$uservenc->phone ?? ''}}
 
 </div> <br>
 
