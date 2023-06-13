@@ -12,7 +12,7 @@
 
 <div class="text-center">
 
-{{$sorteio->name}} {{$notavenc->phone ?? ''}} {{$uservenc->phone ?? ''}}
+{{$sorteio->name}} 
 
 </div> <br>
 
@@ -40,7 +40,7 @@
 
 
 
-<b>Vencedor:</b>  @if($vencedor) {{$vencedor}}  @endif<br><br>    
+<b>Vencedor:</b>   {{$vencedor}} {{$notavenc->phone ?? ''}} {{$uservenc->phone ?? ''}} <br><br>    
 
 <!-- <div class="text-center">
 
