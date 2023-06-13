@@ -40,7 +40,11 @@
 
 
 
-<b>Vencedor:</b>   {{$vencedor}} {{$notavenc->phone ?? ''}} {{$uservenc->phone ?? ''}} <br><br>    
+
+<b>Vencedor:</b>   {{$vencedor}} - {{$notavenc->phone ?? ''}} {{$uservenc->phone ?? ''}} 
+
+
+<br><br>    
 
 <!-- <div class="text-center">
 
