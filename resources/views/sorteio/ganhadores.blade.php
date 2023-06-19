@@ -67,6 +67,10 @@
                 <img src="/img/sorteio8.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 9)
                 <img src="/img/sorteio9.jpg" alt="imagem do setimo sorteio">
+            @elseif($cont == 10)
+                <video>
+                    <source src="/img/sorteio10.mp4" type="video/mp4">
+                </video>
             @endif
 
             </div>
