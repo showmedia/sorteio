@@ -157,13 +157,9 @@ Compre agora!
             @elseif($cont == 9)
                 <img src="/img/sorteio9.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 10)
-            <br>
-            <video width="100%" height="500" controls="controls">
-                <source src="/img/sorteio10.mp4" type="video/mp4">
-                <object data="" width="100%" height="500">
-                <embed width="100%" height="500" src="/img/sorteio10.mp4">
-                </object>
-            </video>
+                <a href="https://www.instagram.com/reel/Cth5vp1NbfP/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio10.jpg" alt="">
+                </a>
             @endif
             </div>
 
