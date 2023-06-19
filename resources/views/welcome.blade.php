@@ -157,7 +157,8 @@ Compre agora!
             @elseif($cont == 9)
                 <img src="/img/sorteio9.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 10)
-                <video>
+            <br>
+                <video controllers>
                     <source src="/img/sorteio10.mp4" type="video/mp4">
                 </video>
             @endif
