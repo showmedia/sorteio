@@ -160,6 +160,8 @@ Compre agora!
                 <a href="https://www.instagram.com/reel/Cth5vp1NbfP/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
                     <img src="/img/sorteio10.jpg" alt="">
                 </a>
+            @elseif($cont == 11)
+                <img src="/img/sorteio11.jpg" alt="imagem do setimo sorteio">
             @endif
             </div>
 
