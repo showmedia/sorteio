@@ -16,71 +16,73 @@
 
 @foreach($vendas as $v)
 
+    @if($v->sorteio->isfavorite == 1)
     <div class="venda"> 
 
-        <b>Data: </b> {{ date('d/m/Y - H:i', strtotime($v->created_at))}} <br>
+<b>Data: </b> {{ date('d/m/Y - H:i', strtotime($v->created_at))}} <br>
 
-        <b>Nome: </b> {{$v->user->name}} <br>
+<b>Nome: </b> {{$v->user->name}} <br>
 
-        <b>email: </b> {{$v->user->email}} <br>
+<b>email: </b> {{$v->user->email}} <br>
 
-        <b>Telefone: </b> {{$v->user->phone}} <br>
+<b>Telefone: </b> {{$v->user->phone}} <br>
 
-        <b>Sorteio: </b> {{$v->sorteio->name}} <br>
+<b>Sorteio: </b> {{$v->sorteio->name}} <br>
 
-        <b>Quantidade de cotas: </b>  {{$v->quantidade}} <br>
+<b>Quantidade de cotas: </b>  {{$v->quantidade}} <br>
 
-        <b>Cotas: </b> @foreach($v->cotas as $cota) {{sprintf("%03s",$cota->number)}}, @endforeach <br>
+<b>Cotas: </b> @foreach($v->cotas as $cota) {{sprintf("%03s",$cota->number)}}, @endforeach <br>
 
-        <b>Status: </b> @if($v->status == 0) Pendente @else Pago @endif <br>
-
-
+<b>Status: </b> @if($v->status == 0) Pendente @else Pago @endif <br>
 
 
 
-        @if($v->status == 0)
-
-            <div class="botoes">
-
-                <div class="bt">
-
-                    <form action="/venda/status/{{$v->id}}" method="post">
-
-                    @csrf
-
-                    <button class="btn btn-sm btn-success">Pagou em dinheiro</button>
-
-                    </form>
-
-                 </div>
 
 
+@if($v->status == 0)
 
-                <div class="bt">
+    <div class="botoes">
 
-                    <form action="/venda/delete/{{$v->id}}" method="post">
+        <div class="bt">
 
-                      @csrf 
+            <form action="/venda/status/{{$v->id}}" method="post">
 
-                    @method('DELETE')
+            @csrf
 
-                    <button class="btn btn-sm btn-danger">Apagar</button>
+            <button class="btn btn-sm btn-success">Pagou em dinheiro</button>
 
-                    </form>
+            </form>
 
-                </div>
-
-            </div>
-
-        @endif
+         </div>
 
 
 
-       
+        <div class="bt">
+
+            <form action="/venda/delete/{{$v->id}}" method="post">
+
+              @csrf 
+
+            @method('DELETE')
+
+            <button class="btn btn-sm btn-danger">Apagar</button>
+
+            </form>
+
+        </div>
 
     </div>
 
+@endif
 
+
+
+
+
+</div>
+
+
+    @endif
 
 @endforeach
 
