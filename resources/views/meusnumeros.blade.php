@@ -49,9 +49,9 @@
 
                                             @if($compra->status == 1)
 
-                                                <div class="info-pisca2">
+                                                <div class="info-pisca2 {{$compra->sorteio->status ? 'bg-danger'}}">
 
-                                                @if($compra->sorteio->status)
+                                                @if($compra->sorteio->status == 0)
 
                                                 Concorrendo!
 
