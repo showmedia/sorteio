@@ -16,7 +16,7 @@
 
 @foreach($vendas as $v)
 
-    @if($v->sorteio->isfavorite == 1)
+    @if($v->sorteio->is_favorite == 1)
     <div class="venda"> 
 
 <b>Data: </b> {{ date('d/m/Y - H:i', strtotime($v->created_at))}} <br>
