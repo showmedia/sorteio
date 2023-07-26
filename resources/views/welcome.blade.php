@@ -164,6 +164,10 @@ Compre agora!
                 <img src="/img/sorteio11.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 12)
                 <img src="/img/sorteio12.jpg" alt="imagem do setimo sorteio">
+            @elseif($cont == 10)
+                <a href="https://www.instagram.com/reel/CuXKNNwpObf/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio13.jpg" alt="">
+                </a>
             @elseif($cont == 14)
                 <img src="/img/sorteio14.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 15)
