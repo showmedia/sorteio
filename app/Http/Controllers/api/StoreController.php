@@ -65,7 +65,7 @@ class StoreController extends Controller
 
       case "payment":
 
-          $payment = MercadoPago\Payment::find_by_id($request->data->id);
+          $payment = MercadoPago\Payment::find_by_id($request->input('data.id'));
 
           $venda = Venda::where([
 
