@@ -60,7 +60,7 @@ class StoreController extends Controller
 
         SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
         // Decodificar o JSON para um array associativo
-        return $request->input('data.id');
+        
         switch($request->type) {
 
       case "payment":
@@ -73,6 +73,8 @@ class StoreController extends Controller
 
         ]);
 
+
+        return $payment->status;
           if($payment->status == 'approved'){
 
             $venda->status = 1;
@@ -80,6 +82,9 @@ class StoreController extends Controller
             $venda->update();
 
           }
+
+          // Retornar uma resposta com status 200 OK
+            return response('OK', Response::HTTP_OK);
 
           break;
 
