@@ -384,7 +384,7 @@ $disponiveis = array_values($disponiveis);
             if($v->pagamento != null && $v->status == 0){
 
                 $payment = MercadoPago\Payment::find_by_id($v->pagamento);        
-                if($payment->status == 'cancelled'){
+                if($payment && $payment->status == 'cancelled'){
                     foreach($v->cotas as $c){
 
                         $c->delete();
