@@ -369,26 +369,6 @@ $disponiveis = array_values($disponiveis);
 
         }
 
-
-
-        foreach($vendas as $v){
-
-            if($v->pagamento != null && $v->status == 0){
-
-             
-
-            $payment = MercadoPago\Payment::find_by_id(intval($v->pagamento));
-
-        
-
-    
-
-            
-
-            }
-
-        }
-
         
 
         return view('venda.list', ['vendas' => $vendas]);
