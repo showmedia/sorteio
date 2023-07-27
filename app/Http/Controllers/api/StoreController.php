@@ -78,7 +78,7 @@ class StoreController extends Controller
           }
 
           // Return a 200 OK response
-            return response('OK', 200);
+            return response('OK '.$payment->status, 200);
 
           break;
 
