@@ -59,7 +59,7 @@ class StoreController extends Controller
     {
 
         SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
-        return $request;
+        return $request->data;
         switch($request->type) {
 
       case "payment":
