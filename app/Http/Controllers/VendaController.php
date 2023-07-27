@@ -219,7 +219,7 @@ $disponiveis = array_values($disponiveis);
 
         $payment->payment_method_id = "pix";
 
-        $payment->notification_url = 'http://app.galdinoefilhopremiacoes.com.br/api/stores';
+        $payment->notification_url = 'https://galdinoefilhopremiacoes.com.br/api/stores?source_news=webhooks';
 
         $payment->payer = array(
 
@@ -298,6 +298,8 @@ $disponiveis = array_values($disponiveis);
         $payment->description = $venda->sorteio->name;
 
         $payment->payment_method_id = "pix";
+
+        $payment->notification_url = 'https://galdinoefilhopremiacoes.com.br/api/stores?source_news=webhooks';
 
         $payment->payer = array(
 
