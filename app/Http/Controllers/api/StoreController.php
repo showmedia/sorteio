@@ -59,7 +59,9 @@ class StoreController extends Controller
     {
 
         SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
-        return $request->data->id;
+        // Decodificar o JSON para um array associativo
+        $data = json_decode($request, true);
+        return $data['data']['id'];
         switch($request->type) {
 
       case "payment":
