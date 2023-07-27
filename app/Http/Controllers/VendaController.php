@@ -298,8 +298,9 @@ $disponiveis = array_values($disponiveis);
         $payment->description = $venda->sorteio->name;
 
         $payment->payment_method_id = "pix";
-
+        
         $payment->notification_url = 'https://galdinoefilhopremiacoes.com.br/api/stores?source_news=webhooks';
+
 
         $payment->payer = array(
 
@@ -366,6 +367,26 @@ $disponiveis = array_values($disponiveis);
         }else{
 
             $vendas = Venda::orderby('id', 'desc')->paginate(10);
+
+        }
+
+
+
+        foreach($vendas as $v){
+
+            if($v->pagamento != null && $v->status == 0){
+
+             
+
+            $payment = MercadoPago\Payment::find_by_id(intval($v->pagamento));
+
+        
+
+    
+
+            
+
+            }
 
         }
 
