@@ -69,8 +69,6 @@ class StoreController extends Controller
 
           $venda = Venda::where('pagamento', $payment->id)->first();
 
-          return $venda;
-
           if($payment->status == 'approved'){
 
             $venda->status = 1;
