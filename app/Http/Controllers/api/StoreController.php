@@ -77,8 +77,8 @@ class StoreController extends Controller
 
           }
 
-          // Retornar uma resposta com status 200 OK
-            return response('OK', Response::HTTP_OK);
+          // Return a 200 OK response
+            return response('OK', 200);
 
           break;
 
