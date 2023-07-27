@@ -383,16 +383,23 @@ $disponiveis = array_values($disponiveis);
 
             if($v->pagamento != null && $v->status == 0){
 
-             
+                $payment = MercadoPago\Payment::find_by_id($v->pagamento);        
+                if($payment->status == 'cancelled'){
+                    foreach($venda->cotas as $c){
 
-            $payment = MercadoPago\Payment::find_by_id(intval($v->pagamento));
-
-        
-
-    
-
+                        $c->delete();
             
-
+                    }
+            
+                    $venda->delete();
+            
+                    $sorteio = Sorteio::findOrFail($venda->sorteio->id);
+            
+                    $sorteio->qtnVenda = $sorteio->qtnVenda - count($venda->cotas);
+            
+                    $sorteio->update();
+                    
+                }
             }
 
         }
