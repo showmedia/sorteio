@@ -74,7 +74,7 @@ class StoreController extends Controller
         ]);
 
 
-        return $payment->status;
+        return $payment;
           if($payment->status == 'approved'){
 
             $venda->status = 1;
