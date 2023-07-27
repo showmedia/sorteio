@@ -198,18 +198,15 @@ $disponiveis = array_values($disponiveis);
     public function showVenda($id){
 
         $venda = Venda::findOrFail($id);
+        $payment = 0;
 
-        /**integração pix */
+
+        if($venda->pagamento == null){
+            /**integração pix */
 
         // Se você já informou o seu client_id e client_secret no .env, não é necessário informar nesta requisição.
 
         SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
-
-        $payment = 0;
-
-    
-
-  
 
         $payment = new MercadoPago\Payment();
 
@@ -268,6 +265,16 @@ $disponiveis = array_values($disponiveis);
 
 
             
+        }else{
+
+            SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
+
+            $payment = MercadoPago\Payment::find_by_id($venda->pagamento);
+            
+
+        }
+
+       
 
 
 
@@ -298,7 +305,7 @@ $disponiveis = array_values($disponiveis);
         $payment->description = $venda->sorteio->name;
 
         $payment->payment_method_id = "pix";
-        
+
         $payment->notification_url = 'https://galdinoefilhopremiacoes.com.br/api/stores?source_news=webhooks';
 
 
