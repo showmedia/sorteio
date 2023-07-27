@@ -67,6 +67,7 @@ class StoreController extends Controller
 
           $payment = MercadoPago\Payment::find_by_id($request->input('data.id'));
 
+          return $payment->id;
           $venda = Venda::where([
 
             ['pagamento','=',$payment->id]
