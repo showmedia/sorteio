@@ -108,7 +108,7 @@ Route::delete('/notes/deletar', [NotaController::class, 'limpar'])->middleware('
 
 Route::get('/sorteio/vencedor/{id}', [SorteiarController::class, 'show'])->middleware('auth');
 
-Route::get('/sorteio/pesquisar', [SorteiarController::class, 'pesquisar'])->middleware('auth');
+Route::get('/sorteio/pesquisar/{id}', [SorteiarController::class, 'pesquisar'])->middleware('auth');
 
 Route::put('/sorteio/vencedor/save', [SorteiarController::class, 'save'])->middleware('auth');
 

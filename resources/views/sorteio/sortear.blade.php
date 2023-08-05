@@ -18,7 +18,7 @@
 
 
 
-<form action="/sorteio/pesquisar" method="get">
+<form action="/sorteio/pesquisar/{{$sorteio->id ?? ''}}" method="get">
 
 
 
