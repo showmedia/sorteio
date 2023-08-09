@@ -156,8 +156,13 @@
 
 
 
+                                            @if($venda->sorteio->tipo == 0)
                                             <p><b>Cotas: </b> @foreach($venda->cotas as $cota) {{sprintf("%03s",$cota->number)}},   @endforeach </p>
 
+                                            @else 
+                                            <p><b>Cotas: </b> @foreach($venda->cotas as $cota) {{sprintf("%04s",$cota->number)}},   @endforeach </p>
+
+                                            @endif
                                         </div>
 
                                     </div>

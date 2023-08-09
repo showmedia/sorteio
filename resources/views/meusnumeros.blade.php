@@ -91,12 +91,25 @@
 
                                    @if($cota->number == $compra->sorteio->sorteado)
 
+                                   @if($compra->sorteio->tipo == 0)
+
                                     <div class="ct premiado">{{sprintf("%03s",$cota->number)}}</div>
 
+                                    @else 
+                                    <div class="ct premiado">{{sprintf("%04s",$cota->number)}}</div>
+                                    @endif
+
                                    @else
+                                   @if($compra->sorteio->tipo == 0)
 
-                                        <div class="ct">{{sprintf("%03s",$cota->number)}}</div>
+                                   <div class="ct">{{sprintf("%03s",$cota->number)}}</div>
 
+
+                                    @else 
+                                    <div class="ct">{{sprintf("%04s",$cota->number)}}</div>
+
+                                    @endif
+                                        
                                     @endif
 
                                     @endforeach
