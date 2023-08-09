@@ -214,21 +214,40 @@
 
                     <div class="ops">
 
-                    <div class="op op-selected" onclick="somar(10,{{$sorteio->valorCota}})">
+                   @if($sorteio->tipo == 0)
+                   <div class="op op-selected" onclick="somar(10,{{$sorteio->valorCota}})">
 
-                            <p>
+                        <p>
 
-                                <small>+</small>
+                            <small>+</small>
 
-                                <strong>10</strong> <br>
+                            <strong>10</strong> <br>
 
-                                <span>SELECIONAR</span>
+                            <span>SELECIONAR</span>
 
-                            </p>
+                        </p>
 
-                            <span class="popular info-pisca"> Mais popular </span>
+                        <span class="popular info-pisca"> Mais popular </span>
 
                         </div>
+                   @else 
+                   <div class="op op-selected" onclick="somar(20,{{$sorteio->valorCota}})">
+                        <p>
+
+                            <small>+</small>
+
+                            <strong>20</strong> <br>
+
+                            <span>SELECIONAR</span>
+
+                        </p>
+
+                        <span class="popular info-pisca"> Pague Menos </span>
+
+                        </div>
+                   @endif
+
+                   
 
                         <div class="op" onclick="somar(25,{{$sorteio->valorCota}})">
 
@@ -281,10 +300,10 @@
                 </div>
 
 
-
-              <!--   <div class="desconto bg-danger info-pisca" id="info-pisca">Promoção: Pague apenas R$ 13,50 na compra de 10 cotas <span id="desconto"> - *Desconto aplicado</span></div>
-
- -->
+@if($sorteio->tipo == 1)
+               <div class="desconto bg-danger info-pisca" id="info-pisca">Promoção: Pague apenas 1 real por cota na compra a partir de 20 <span id="desconto"> - *Desconto aplicado</span></div>
+@endif
+ 
 
                 <form action="/sorteio/comprar/{{$sorteio->id}}" method="post">
 
