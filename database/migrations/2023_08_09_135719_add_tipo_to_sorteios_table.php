@@ -14,7 +14,7 @@ class AddTipoToSorteiosTable extends Migration
     public function up()
     {
         Schema::table('sorteios', function (Blueprint $table) {
-            $table->integer('tipo')->default(0);
+            $table->boolean('tipo')->default(0);
         });
     }
 
