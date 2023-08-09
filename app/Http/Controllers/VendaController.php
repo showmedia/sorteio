@@ -47,8 +47,12 @@ class VendaController extends Controller
         $qtn = intval($request->qtn);
 
      
-
-        $venda->valueAll = $sorteio->valorCota * $qtn;
+        if($sorteio->tipo == 0){
+            $venda->valueAll = $sorteio->valorCota * $qtn;
+        }else{
+            $venda->valueAll = 1 * $qtn;
+        }
+        
 
         
 
@@ -84,7 +88,12 @@ for ($i = 0; $i < $qtn; $i++) {
 
     $cota = new Cota;
     $cota->number = $numCota;
-    $cota->value = $sorteio->valorCota;
+    if($sorteio->tipo == 0){
+        $cota->value = $sorteio->valorCota;
+    }else{
+        $cota->value = 1;
+    }
+    
     $venda->cotas[] = $cota;
 
     // Remove o número da cota vendida do array de cotas disponíveis
