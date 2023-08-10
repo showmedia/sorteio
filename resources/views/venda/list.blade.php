@@ -31,7 +31,7 @@
 
 <b>Quantidade de cotas: </b>  {{$v->quantidade}} <br>
 
-<b>Cotas: </b> @foreach($v->cotas as $cota) {{sprintf("%03s",$cota->number)}}, @endforeach <br>
+<b>Cotas: </b> @foreach($v->cotas as $cota) @if($sorteio->tipo == 0) {{sprintf("%03s",$cota->number)}}, @else {{sprintf("%04s",$cota->number)}}, @endif @endforeach <br>
 
 <b>Status: </b> @if($v->status == 0) Pendente @else Pago @endif <br>
 
