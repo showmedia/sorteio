@@ -216,12 +216,14 @@
 
         <!-- Botao grupo whats -->
 
- @if(Auth::user()->nivel == 0)
+ @if(Auth::user() && Auth::user()->nivel == 1)
 
-        <a href="https://chat.whatsapp.com/L2qv8e6tp7BIhrmOS0t5vA" target="_blanck" class="btn btn-success btn-whats"> <ion-icon name="logo-whatsapp"></ion-icon>
+        
+
+@else 
+<a href="https://chat.whatsapp.com/L2qv8e6tp7BIhrmOS0t5vA" target="_blanck" class="btn btn-success btn-whats"> <ion-icon name="logo-whatsapp"></ion-icon>
 
  Grupo </a>
-
 @endif
 
 
