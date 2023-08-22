@@ -103,8 +103,9 @@ Route::delete('/nota/{id}', [NotaController::class, 'delete'])->middleware('auth
 Route::delete('/nota/numero/{id}', [NotaController::class, 'remove'])->middleware('auth');
 
 Route::delete('/notes/deletar', [NotaController::class, 'limpar'])->middleware('auth');
+Route::put('/nota/{id}', [NotaController::class, 'update'])->middleware('auth');
 
-Route::get('/note/edit/{id}', [NotaController::class, 'editar'])->middleware('auth');
+Route::get('/note/edit/{id}', [NotaController::class, 'edit'])->middleware('auth');
 
 
 
