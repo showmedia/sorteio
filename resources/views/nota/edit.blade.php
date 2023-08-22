@@ -87,7 +87,7 @@
 
                 <input type="text"
 
-                name="phone" id="phone" value="{{$nota->telefone ?? ''}}">
+                name="phone" id="phone" value="{{$nota->phone ?? ''}}">
 
                 <span>Whatsapp</span>
 

@@ -41,6 +41,15 @@ class NotaController extends Controller
         return view('nota.edit', ['nota' => $nota]);
     }
 
+    public function update(Request $request, $id){
+        $nota = Nota::findOrFail($id);
+        $nota->name = $request->name;
+        $nota->email = $request->email;
+        $nota->phone = $request->phone;
+        $nota->update();
+        return redirect('/nota/{{$nota->id}}')->with('msg', 'Cliente Editado com sucesso!');
+    }
+
 
 
     public function store(Request $request){
