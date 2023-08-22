@@ -47,7 +47,7 @@ class NotaController extends Controller
         $nota->email = $request->email;
         $nota->phone = $request->phone;
         $nota->update();
-        return redirect('/nota/{{$nota->id}}')->with('msg', 'Cliente Editado com sucesso!');
+        return redirect('/nota/'.$nota->id)->with('msg', 'Cliente Editado com sucesso!');
     }
 
 
