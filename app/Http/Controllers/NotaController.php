@@ -36,6 +36,11 @@ class NotaController extends Controller
 
     }
 
+    public function edit($id){
+        $nota = Nota::findOrFail($id);
+        return view('nota.edit', ['nota' => $nota]);
+    }
+
 
 
     public function store(Request $request){

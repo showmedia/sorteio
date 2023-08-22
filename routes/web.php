@@ -104,6 +104,8 @@ Route::delete('/nota/numero/{id}', [NotaController::class, 'remove'])->middlewar
 
 Route::delete('/notes/deletar', [NotaController::class, 'limpar'])->middleware('auth');
 
+Route::get('/note/edit/{id}', [NotaController::class, 'editar'])->middleware('auth');
+
 
 
 Route::get('/sorteio/vencedor/{id}', [SorteiarController::class, 'show'])->middleware('auth');
