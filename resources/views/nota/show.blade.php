@@ -16,7 +16,7 @@
 
                             <ion-icon class="icon" name="cart-outline"></ion-icon> 
 
-                            <strong> {{$nota->name}} </strong> 
+                            <strong> {{$nota->name}} <a href="/note/edit/{{$nota->id}}"><ion-icon name="create-outline"></ion-icon></a> </strong> 
 
                             <small> Números</small> 
 
