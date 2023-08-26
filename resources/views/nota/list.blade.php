@@ -18,7 +18,7 @@
 
                             <strong> Cotas vendidas pelo talão </strong> 
 
-                            <small> todas vendas</small>
+                            <small> {{ $notas->sum(function ($nota) { return count($nota->numeros); }) }} </small>
 
                             </span>
 
