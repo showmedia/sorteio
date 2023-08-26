@@ -18,7 +18,7 @@
 
                             <strong> Cotas vendidas pelo talão </strong> 
 
-                            <small> {{ $notas->sum(function ($nota) { return count($nota->numeros); }) }} </small>
+                            <small> {{ $notas->sum(function ($nota) { return count($nota->numeros); }) }} cotas lançadas</small>
 
                             </span>
 
