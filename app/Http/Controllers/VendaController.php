@@ -375,7 +375,7 @@ $disponiveis = array_values($disponiveis);
     public function listVendas($all){
 
         if(auth()->user()->nivel == 0){
-            return redirect('/user/sorteio/show/'.$sorteio->id);
+            return redirect('/');
         }
         $vendas;
 
