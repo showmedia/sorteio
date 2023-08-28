@@ -175,7 +175,7 @@ Compre agora!
             @elseif($cont == 16)
                 <img src="/img/sorteio16.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 20)
-                <img src="/img/sorteio20.jpg" alt="imagem do setimo sorteio">
+                <img src="/img/sorteio20.jpeg" alt="imagem do setimo sorteio">
             @endif
             </div>
 
