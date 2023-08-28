@@ -96,7 +96,13 @@ class SorteioController extends Controller
 
     public function create(){
 
-        return view('sorteio.create');
+        
+
+        if(auth()->user()->nivel == 1){
+            return view('sorteio.create');
+        }else{
+            return redirect('/');
+        }
 
     }
 
@@ -106,7 +112,11 @@ class SorteioController extends Controller
 
         $sorteio = Sorteio::findOrFail($id);
 
-        return view('sorteio.edit', ['sorteio' => $sorteio]);
+        if(auth()->user()->nivel == 1){
+            return view('sorteio.edit', ['sorteio' => $sorteio]);
+        }else{
+            return redirect('/user/sorteio/show/'.$sorteio->id);
+        }
 
     }
 
@@ -207,6 +217,10 @@ class SorteioController extends Controller
 
 
     public function favorito($id){
+
+        if(auth()->user()->nivel == 0){
+            return redirect('/user/sorteio/show/'.$sorteio->id);
+        }
 
         $sorteio = Sorteio::findOrFail($id);
 
