@@ -178,7 +178,7 @@ $disponiveis = array_values($disponiveis);
     public function limparcompras($id){
 
         if(auth()->user()->nivel == 0){
-            return redirect('/user/sorteio/show/'.$sorteio->id);
+            return redirect('/');
         }
         $user = User::findOrFail($id);
         if($user->nivel == 1){
@@ -197,7 +197,7 @@ $disponiveis = array_values($disponiveis);
     public function pagou($id){
 
         if(auth()->user()->nivel == 0){
-            return redirect('/user/sorteio/show/'.$sorteio->id);
+            return redirect('/');
         }
 
         $venda = Venda::findOrFail($id);
@@ -418,7 +418,7 @@ $disponiveis = array_values($disponiveis);
     public function destroy($id){
 
         if(auth()->user()->nivel == 0){
-            return redirect('/user/sorteio/show/'.$sorteio->id);
+            return redirect('/');
         }
 
         $venda = Venda::findOrFail($id);
