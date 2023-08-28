@@ -219,7 +219,7 @@ class SorteioController extends Controller
     public function favorito($id){
 
         if(auth()->user()->nivel == 0){
-            return redirect('/user/sorteio/show/'.$sorteio->id);
+            return redirect('/');
         }
 
         $sorteio = Sorteio::findOrFail($id);
