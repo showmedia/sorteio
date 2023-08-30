@@ -108,7 +108,7 @@
 
         @foreach($nota->numeros as $num)
 
-            {{sprintf("%04s",$num->numero)}} - 
+            {{sprintf("%03s",$num->numero)}} - 
 
         @endforeach
 

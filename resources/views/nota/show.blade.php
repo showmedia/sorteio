@@ -44,7 +44,7 @@
 
                             @foreach($nota->numeros as $cota)
 
-                                <div class="ct"  data-bs-toggle="modal" data-bs-target="#modal{{$cota->id}}">{{sprintf("%04s",$cota->numero)}}</div>
+                                <div class="ct"  data-bs-toggle="modal" data-bs-target="#modal{{$cota->id}}">{{sprintf("%03s",$cota->numero)}}</div>
 
                                 <!-- Modal -->
 
