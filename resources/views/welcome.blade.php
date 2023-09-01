@@ -80,7 +80,7 @@ Compre agora!
                                            @if($sorteio->qtnCotas <= $sorteio->qtnVenda)
                     <div class="info-pisca bg-danger">
 
-Compre agora!
+Encerrado!
 
 </div>
                     @else
