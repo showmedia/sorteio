@@ -77,11 +77,19 @@ Compre agora!
 
                                             <small> {{mb_strimwidth($sorteio->regulamento, 0, 50, "...")}} </small>
 
-                                            <div class="info-pisca">
+                                           @if($sorteio->qtnCotas <= $sorteio->qtnVenda)
+                    <div class="info-pisca bg-danger">
 
-                                                Concorra agora!
+Compre agora!
 
-                                            </div>
+</div>
+                    @else
+                                        <div class="info-pisca">
+
+                                            Compre agora!
+
+                                        </div>
+                @endif
 
                                         </div>
 
