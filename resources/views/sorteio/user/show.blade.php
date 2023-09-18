@@ -301,7 +301,7 @@
 
 
 @if($sorteio->tipo == 1)
-               <div class="desconto bg-danger info-pisca" id="info-pisca">Promoção: Pague apenas 1 real por cota na compra a partir de 20 <span id="desconto"> - *Desconto aplicado</span></div>
+               <div class="desconto bg-danger info-pisca" id="info-pisca">Promoção: Pague apenas 50 centavos por cota na compra a partir de 40 <span id="desconto"> - *Desconto aplicado</span></div>
 @endif
  
 
