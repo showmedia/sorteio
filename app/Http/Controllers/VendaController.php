@@ -47,8 +47,8 @@ class VendaController extends Controller
         $qtn = intval($request->qtn);
 
      
-        if($sorteio->tipo == 1 && $qtn > 19){
-            $venda->valueAll = 1 * $qtn;
+        if($sorteio->tipo == 1 && $qtn > 39){
+            $venda->valueAll = 0.50 * $qtn;
         }else{
             $venda->valueAll = $sorteio->valorCota * $qtn;
         }
@@ -88,8 +88,8 @@ for ($i = 0; $i < $qtn; $i++) {
 
     $cota = new Cota;
     $cota->number = $numCota;
-    if($sorteio->tipo == 1 && $qtn > 19){
-        $cota->value = 1;
+    if($sorteio->tipo == 1 && $qtn > 39){
+        $cota->value = 0.50;
     }else{
         $cota->value = $sorteio->valorCota;
     }
