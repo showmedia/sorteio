@@ -182,12 +182,33 @@ Encerrado!
                 <img src="/img/sorteio15.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 16)
                 <img src="/img/sorteio16.jpg" alt="imagem do setimo sorteio">
+            @elseif($cont == 17)
+                <a href="https://www.instagram.com/reel/CvZyOy0Nx54/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio17.jpg" alt="">
+                </a>
+            @elseif($cont == 18)
+                <a href="https://www.instagram.com/reel/CvqjX97NIbb/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio18.jpg" alt="">
+                </a>
+           
             @elseif($cont == 19)
                 <img src="/img/sorteio19.jpg" alt="imagem do setimo sorteio">
             @elseif($cont == 20)
                 <img src="/img/sorteio20.jpeg" alt="imagem do setimo sorteio">
+            @elseif($cont == 21)
+                <a href="https://www.instagram.com/reel/CwyWxWSL1w7/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio21.jpg" alt="">
+                </a>
+            @elseif($cont == 22)
+                <a href="https://www.instagram.com/reel/CxDoT4ers6h/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio22.jpg" alt="">
+                </a>
             @elseif($cont == 23)
                 <img src="/img/sorteio23.jpg" alt="imagem do setimo sorteio">
+            @elseif($cont == 24)
+                <a href="https://www.instagram.com/reel/CxiO7TMr3T8/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==" target="_blank"> 
+                    <img src="/img/sorteio24.jpg" alt="">
+                </a>
             @elseif($cont == 25)
                 <img src="/img/sorteio25.jpg" alt="imagem do setimo sorteio">
             @endif
