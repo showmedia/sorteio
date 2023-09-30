@@ -138,6 +138,8 @@ Encerrado!
                             @php 
                                 $cont++;
                             @endphp
+                            <ul class='minhalista'>
+            <li>
                        @if($sorteio->status == 1)
 
                                 <div class="vencedor">
@@ -148,9 +150,8 @@ Encerrado!
 
            
            @if($cont == 1)
-           <ul class='minhalista'>
-            <li><img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio"></li>
-           </ul>
+           <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio"></li>
+           
                 
             @elseif($cont == 2)
                 <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do segundo sorteio">
@@ -219,7 +220,7 @@ Encerrado!
             </div>
 
                                 @endif
-
+                                </ul>
                             @endforeach
 
                         
