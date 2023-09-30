@@ -146,8 +146,12 @@ Encerrado!
 
            <span> {{$sorteio->sorteado}}</span>
 
+           
            @if($cont == 1)
-                <img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio">
+           <ul class='minhalista'>
+            <li><img src="/img/sorteio1.jpeg" alt="imagem do ganhador do primeiro sorteio"></li>
+           </ul>
+                
             @elseif($cont == 2)
                 <img src="/img/sorteio2.jpeg" alt="imagem do ganhador do segundo sorteio">
             @elseif($cont == 3)
