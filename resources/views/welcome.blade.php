@@ -234,10 +234,11 @@ Encerrado!
 @endsection
 
 @section('script')
-    var listaItems = $('.minhalista li');
+var listaItems = $('.minhalista li');
     var currentIndex = 0;
 
     function showItem(index) {
+        listaItems.hide(); // Oculta todos os itens
         var currentItem = listaItems.eq(index);
         currentItem.fadeIn(1000, function() {
             // Aguarde 3 segundos antes de ocultar o item atual
