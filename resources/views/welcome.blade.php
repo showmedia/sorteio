@@ -138,7 +138,7 @@ Encerrado!
                             @php 
                                 $cont++;
                             @endphp
-                            <ul class='minhalista'>
+                            <ul style="list-style-type: none;" class='minhalista'>
             <li>
                        @if($sorteio->status == 1)
 
