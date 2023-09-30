@@ -234,23 +234,23 @@ Encerrado!
 @endsection
 
 @section('script')
-var listaItems = $('.minhalista li');
+    var listaItems = $('.minhalista li');
     var currentIndex = 0;
 
-    function showNextItem() {
-        var currentItem = listaItems.eq(currentIndex);
-        currentItem.fadeIn(1000); // Tempo de fade-in em milissegundos
-
-        // Aguarde 3 segundos antes de ocultar o item atual
-        setTimeout(function() {
-            currentItem.fadeOut(1000, function() {
-                // Avança para o próximo item
-                currentIndex = (currentIndex + 1) % listaItems.length;
-                showNextItem(); // Chama a função novamente para o próximo item
-            });
-        }, 3000); // Tempo de espera em milissegundos
+    function showItem(index) {
+        var currentItem = listaItems.eq(index);
+        currentItem.fadeIn(1000, function() {
+            // Aguarde 3 segundos antes de ocultar o item atual
+            setTimeout(function() {
+                currentItem.fadeOut(1000, function() {
+                    // Avance para o próximo item
+                    var nextIndex = (index + 1) % listaItems.length;
+                    showItem(nextIndex); // Mostra o próximo item
+                });
+            }, 3000); // Tempo de espera em milissegundos
+        });
     }
 
-    // Inicie o ciclo de exibição
-    showNextItem();
+    // Inicie o ciclo de exibição com o primeiro item
+    showItem(currentIndex);
 @endsection
