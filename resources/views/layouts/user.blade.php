@@ -342,7 +342,7 @@
 
         $(document).ready(function(){
 
-
+            @yield('script')
 
          var slide = 0;
 

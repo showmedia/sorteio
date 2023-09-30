@@ -232,3 +232,25 @@ Encerrado!
 
 
 @endsection
+
+@section('script')
+var listaItems = $('.minhalista li');
+    var currentIndex = 0;
+
+    function showNextItem() {
+        var currentItem = listaItems.eq(currentIndex);
+        currentItem.fadeIn(1000); // Tempo de fade-in em milissegundos
+
+        // Aguarde 3 segundos antes de ocultar o item atual
+        setTimeout(function() {
+            currentItem.fadeOut(1000, function() {
+                // Avança para o próximo item
+                currentIndex = (currentIndex + 1) % listaItems.length;
+                showNextItem(); // Chama a função novamente para o próximo item
+            });
+        }, 3000); // Tempo de espera em milissegundos
+    }
+
+    // Inicie o ciclo de exibição
+    showNextItem();
+@endsection
