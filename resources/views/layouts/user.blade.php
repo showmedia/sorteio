@@ -332,7 +332,7 @@
 
  <!-- SCRIPT DA APLICAÇÃO-->
 
- <script src="/js/scriptv7.js"></script>
+ <script src="/js/scriptv8.js"></script>
 
    
 
