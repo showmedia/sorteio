@@ -160,7 +160,7 @@
                                             <p><b>Cotas: </b> @foreach($venda->cotas as $cota) {{sprintf("%03s",$cota->number)}},   @endforeach </p>
 
                                             @else 
-                                            <p><b>Cotas: </b> @foreach($venda->cotas as $cota) {{sprintf("%04s",$cota->number)}},   @endforeach </p>
+                                            <p><b>Cotas: </b> @foreach($venda->cotas as $cota) @if($venda->status == 0) ????  @else {{sprintf("%04s",$cota->number)}} @endif,   @endforeach </p>
 
                                             @endif
                                         </div>
