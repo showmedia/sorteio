@@ -88,30 +88,31 @@
                                    <div class="cotas"  onclick="link('venda/show/{{$compra->id}}')">
 
                                    @foreach($compra->cotas as $cota)
-
+                                    @if($compra->sorteio->status == 0)
+                                        ???? 
+                                    @else 
                                    @if($cota->number == $compra->sorteio->sorteado)
 
-                                   @if($compra->sorteio->tipo == 0)
+                                    @if($compra->sorteio->tipo == 0)
 
-                                    <div class="ct premiado">{{sprintf("%03s",$cota->number)}}</div>
+                                        <div class="ct premiado">{{sprintf("%03s",$cota->number)}}</div>
 
                                     @else 
-                                    <div class="ct premiado">{{sprintf("%04s",$cota->number)}}</div>
+                                        <div class="ct premiado">{{sprintf("%04s",$cota->number)}}</div>
                                     @endif
 
                                    @else
-                                   @if($compra->sorteio->tipo == 0)
 
-                                   <div class="ct">{{sprintf("%03s",$cota->number)}}</div>
+                                    @if($compra->sorteio->tipo == 0)
+
+                                        <div class="ct">{{sprintf("%03s",$cota->number)}}</div>
 
 
                                     @else 
-                                    <div class="ct">{{sprintf("%04s",$cota->number)}}</div>
-
+                                        <div class="ct">{{sprintf("%04s",$cota->number)}}</div>
+                                    @endif    
+                                  @endif
                                     @endif
-                                        
-                                    @endif
-
                                     @endforeach
 
                                    </div>
