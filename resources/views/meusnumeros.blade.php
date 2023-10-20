@@ -88,7 +88,7 @@
                                    <div class="cotas"  onclick="link('venda/show/{{$compra->id}}')">
 
                                    @foreach($compra->cotas as $cota)
-                                    @if($compra->sorteio->status == 0)
+                                    @if($compra->status == 0)
                                         ???? 
                                     @else 
                                    @if($cota->number == $compra->sorteio->sorteado)

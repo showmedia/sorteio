@@ -47,8 +47,8 @@ class VendaController extends Controller
         $qtn = intval($request->qtn);
 
      
-        if($sorteio->tipo == 1 && $qtn > 39){
-            $venda->valueAll = 0.50 * $qtn;
+        if($sorteio->tipo == 1 && $qtn > 49){
+            $venda->valueAll = 0.30 * $qtn;
         }else{
             $venda->valueAll = $sorteio->valorCota * $qtn;
         }
