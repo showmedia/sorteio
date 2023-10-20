@@ -88,8 +88,8 @@ for ($i = 0; $i < $qtn; $i++) {
 
     $cota = new Cota;
     $cota->number = $numCota;
-    if($sorteio->tipo == 1 && $qtn > 39){
-        $cota->value = 0.50;
+    if($sorteio->tipo == 1 && $qtn > 49){
+        $cota->value = 0.30;
     }else{
         $cota->value = $sorteio->valorCota;
     }
