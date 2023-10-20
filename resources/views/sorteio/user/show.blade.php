@@ -231,12 +231,12 @@
 
                         </div>
                    @else 
-                   <div class="op op-selected" onclick="somar(40,{{$sorteio->valorCota}})">
+                   <div class="op op-selected" onclick="somar(50,{{$sorteio->valorCota}})">
                         <p>
 
                             <small>+</small>
 
-                            <strong>40</strong> <br>
+                            <strong>50</strong> <br>
 
                             <span>SELECIONAR</span>
 
@@ -249,13 +249,13 @@
 
                    
 
-                        <div class="op" onclick="somar(25,{{$sorteio->valorCota}})">
+                        <div class="op" onclick="somar(75,{{$sorteio->valorCota}})">
 
                             <p>
 
                                 <small>+</small>
 
-                                <strong>25</strong> <br>
+                                <strong>75</strong> <br>
 
                                 <span>SELECIONAR</span>
 
@@ -267,13 +267,13 @@
 
                     <div class="ops">
 
-                    <div class="op" onclick="somar(50,{{$sorteio->valorCota}})">
+                    <div class="op" onclick="somar(85,{{$sorteio->valorCota}})">
 
                             <p>
 
                                 <small>+</small>
 
-                                <strong>50</strong> <br>
+                                <strong>85</strong> <br>
 
                                 <span>SELECIONAR</span>
 
