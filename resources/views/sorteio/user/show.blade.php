@@ -317,7 +317,7 @@
 
                     <span class="input-group-text" id="menos" onclick="calcular({{$sorteio->valorCota}},0)"><ion-icon class="menos" name="remove-circle-outline"></ion-icon></span>
 
-                    <input type="text" class="form-control" name="qtn" id="numberCotas" value="5" readonly aria-label="Amount (to the nearest dollar)">
+                    <input type="text" class="form-control" name="qtn" id="numberCotas" value="5"  aria-label="Amount (to the nearest dollar)">
 
                     <span class="input-group-text" id="mais" onclick="calcular({{$sorteio->valorCota}},1)"><ion-icon class="mais" name="add-circle-outline"></ion-icon></span>
 
