@@ -190,7 +190,7 @@
 
       <!-- SCRIPT DA APLICAÇÃO-->
 
-      <script src="/js/scriptv13.js"></script>
+      <script src="/js/scriptv14.js"></script>
 
     <!-- icons -->
 
