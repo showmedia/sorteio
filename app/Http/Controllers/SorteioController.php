@@ -83,6 +83,7 @@ class SorteioController extends Controller
     public function show($id){
 
         $sorteio = Sorteio::findOrFail($id);
+        $userName = null;
 
         if ($sorteio) {
             $vendasDoSorteio = $sorteio->vendas()->with('user')->get();

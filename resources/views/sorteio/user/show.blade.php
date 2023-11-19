@@ -164,6 +164,10 @@
 
         </div>
 
+        <div class="maior-compra bg-primary-subtle" style="width:100%; padding:3px; text-white">
+            <strong>Maior comprador: </strong> {{$userName}}
+        </div>
+
 
 
         <div class="rodape" style="z-index: 9999;">
