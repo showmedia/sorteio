@@ -93,6 +93,8 @@ class SorteioController extends Controller
             ->orderByRaw('SUM(vendas.quantidade) DESC')
             ->first();
 
+            return $usuarioQueMaisComprou;
+
         if ($usuarioQueMaisComprou) {
             // O usuário que mais comprou cotas no sorteio de ID 38 foi encontrado
             // Você pode acessar as informações do usuário usando $usuarioQueMaisComprou
