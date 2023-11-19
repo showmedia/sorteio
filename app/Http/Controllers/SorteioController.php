@@ -83,32 +83,10 @@ class SorteioController extends Controller
     public function show($id){
 
         $sorteio = Sorteio::findOrFail($id);
-        $userName = null;
-
-        $usuarioQueMaisComprou = User::select('users.*')
-            ->join('vendas', 'users.id', '=', 'vendas.users_id')
-            ->join('sorteios', 'vendas.sorteios_id', '=', 'sorteios.id')
-            ->where('sorteios.id', '=', $id)
-            ->groupBy('users.id')
-            ->orderByRaw('SUM(vendas.quantidade) DESC')
-            ->first();
-
-            return $usuarioQueMaisComprou;
-
-        if ($usuarioQueMaisComprou) {
-            // O usuário que mais comprou cotas no sorteio de ID 38 foi encontrado
-            // Você pode acessar as informações do usuário usando $usuarioQueMaisComprou
-            $userId = $usuarioQueMaisComprou->id;
-            $userName = $usuarioQueMaisComprou->name;
-            $quantidadeComprada = $usuarioQueMaisComprou->quantidade_total; // Esta coluna não existe, apenas para ilustração
-
-            // Faça o que precisar com as informações do usuário que mais comprou
-        } else {
-            // Nenhum usuário encontrado para o sorteio de ID 38
-        }
+        
 
         if(auth()->user()->nivel == 1){
-            return view('sorteio.show', ['sorteio' => $sorteio, 'userName' => $userName]);
+            return view('sorteio.show', ['sorteio' => $sorteio]);
         }else{
             return redirect('/user/sorteio/show/'.$sorteio->id);
         }
@@ -225,7 +203,30 @@ class SorteioController extends Controller
 
         }
 
-        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal]);
+        $userName = null;
+
+        $usuarioQueMaisComprou = User::select('users.*')
+            ->join('vendas', 'users.id', '=', 'vendas.users_id')
+            ->join('sorteios', 'vendas.sorteios_id', '=', 'sorteios.id')
+            ->where('sorteios.id', '=', $id)
+            ->groupBy('users.id')
+            ->orderByRaw('SUM(vendas.quantidade) DESC')
+            ->first();
+
+            
+        if ($usuarioQueMaisComprou) {
+            // O usuário que mais comprou cotas no sorteio de ID 38 foi encontrado
+            // Você pode acessar as informações do usuário usando $usuarioQueMaisComprou
+            $userId = $usuarioQueMaisComprou->id;
+            $userName = $usuarioQueMaisComprou->name;
+            $quantidadeComprada = $usuarioQueMaisComprou->quantidade_total; // Esta coluna não existe, apenas para ilustração
+
+            // Faça o que precisar com as informações do usuário que mais comprou
+        } else {
+            // Nenhum usuário encontrado para o sorteio de ID 38
+        }
+
+        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'userName' => $userName]);
 
     }
 
