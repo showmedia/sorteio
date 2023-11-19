@@ -165,7 +165,7 @@
         </div>
 
         <div class="maior-compra bg-primary" style="width:100%; padding:3px; text-white; text-align:center;">
-            <strong>Maior comprador: </strong> <!-- {{$userName ?? ''}} -->
+            <strong>Maior comprador: </strong> {{$userName ?? ''}}
         </div>
 
 
