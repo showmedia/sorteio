@@ -84,8 +84,35 @@ class SorteioController extends Controller
 
         $sorteio = Sorteio::findOrFail($id);
 
+        if ($sorteio) {
+            $vendasDoSorteio = $sorteio->vendas()->with('user')->get();
+        
+            $usuarioQueMaisComprou = $vendasDoSorteio->groupBy('users_id')
+                ->map(function ($vendas, $userId) {
+                    return [
+                        'users_id' => $userId,
+                        'quantidade_total' => $vendas->sum('quantidade'),
+                    ];
+                })
+                ->sortByDesc('quantidade_total')
+                ->first();
+        
+            if ($usuarioQueMaisComprou) {
+                // O usuário que mais comprou cotas no sorteio de ID 38 foi encontrado
+                $userId = $usuarioQueMaisComprou['users_id'];
+                $userName = User::find($userId)->name;
+                $quantidadeComprada = $usuarioQueMaisComprou['quantidade_total'];
+        
+                // Faça o que precisar com as informações do usuário que mais comprou
+            } else {
+                // Nenhum usuário encontrado para o sorteio de ID 38
+            }
+        } else {
+            // Sorteio não encontrado
+        }
+
         if(auth()->user()->nivel == 1){
-            return view('sorteio.show', ['sorteio' => $sorteio]);
+            return view('sorteio.show', ['sorteio' => $sorteio, 'userName' => $userName]);
         }else{
             return redirect('/user/sorteio/show/'.$sorteio->id);
         }
