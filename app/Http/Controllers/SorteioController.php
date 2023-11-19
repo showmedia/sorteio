@@ -206,8 +206,8 @@ class SorteioController extends Controller
         $userName = null;
 
         $usuarioQueMaisComprou = User::select('users.*')
-        ->join('vendas', 'users.id', '=', 'vendas.user_id')
-        ->join('sorteios', 'vendas.sorteio_id', '=', 'sorteios.id')
+        ->join('vendas', 'users.id', '=', 'vendas.users_id')
+        ->join('sorteios', 'vendas.sorteios_id', '=', 'sorteios.id')
         ->where('sorteios.id', '=', $sorteioId)
         ->where('users.id', '!=', 1) // Exclui o usuário com ID 1
         ->groupBy('users.id')
