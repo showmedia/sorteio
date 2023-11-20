@@ -157,7 +157,7 @@
 
 
                                             @if($venda->sorteio->tipo == 0)
-                                            <p><b>Cotas: </b> @foreach($venda->cotas as $cota) @if($venda->status == 0) ????  @else  {{sprintf("%03s",$cota->number)}} @endif,   @endforeach </p>
+                                            <p><b>Cotas: </b> @foreach($venda->cotas as $cota) @if($venda->status == 0) ????  @else  {{sprintf("%04s",$cota->number)}} @endif,   @endforeach </p>
 
                                             @else 
                                             <p><b>Cotas: </b> @foreach($venda->cotas as $cota) @if($venda->status == 0) ????  @else {{sprintf("%04s",$cota->number)}} @endif,   @endforeach </p>
