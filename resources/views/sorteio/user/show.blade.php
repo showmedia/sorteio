@@ -165,7 +165,7 @@
         </div>
 
          <div class="maior-compra bg-primary text-white" style="width:100%; padding:3px; text-align:center; margin-top:3px;">
-            <strong>Top comprador: </strong> {{$userName ?? ''}}
+            <strong>Top comprador: </strong> {{$userName ?? ''}} @auth @if(Auth::user()->nivel == 1) - {{$qtntop ?? ''}} @endif @endauth
         </div>
 
 

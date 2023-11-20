@@ -227,7 +227,7 @@ class SorteioController extends Controller
             // Nenhum usuário encontrado para o sorteio de ID 38
         }
 
-        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'userName' => $userName]);
+        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'userName' => $userName, 'qtntop' => $quantidadeComprada]);
 
     }
 
