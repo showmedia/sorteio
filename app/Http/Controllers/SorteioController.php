@@ -204,6 +204,7 @@ class SorteioController extends Controller
         }
 
         $userName = null;
+        $quantidadeComprada = 0;
 
         $usuarioQueMaisComprou = User::select('users.*')
             ->join('vendas', 'users.id', '=', 'vendas.users_id')
