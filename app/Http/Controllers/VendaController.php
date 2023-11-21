@@ -398,7 +398,7 @@ $disponiveis = array_values($disponiveis);
         }
 
         if ($all == 'all'){
-            Venda::orderby('id', 'desc')->get();
+            $vendas = Venda::orderby('id', 'desc')->get();
         }else{
 
             $vendas = Venda::orderby('id', 'desc')->paginate(10);
