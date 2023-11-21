@@ -28,6 +28,8 @@ use App\Mail\CompraCota;
 
 use App\Mail\VendaFeita;
 
+use Carbon\Carbon;
+
 
 
 class VendaController extends Controller
@@ -379,18 +381,18 @@ $disponiveis = array_values($disponiveis);
         }
         $vendas;
 
-         /**integração pix */
+         // Defina o limite de tempo para 15 minutos
+        $limiteTempo = Carbon::now()->subMinutes(15);
 
-        // Se você já informou o seu client_id e client_secret no .env, não é necessário informar nesta requisição.
+        // Consulta as vendas que atendem aos critérios
+        $vendasParaExcluir = Venda::where('status', 0)
+        ->where('created_at', '<', $limiteTempo)
+        ->get();
 
-        SDK::setAccessToken("APP_USR-6676594080831518-091522-03e3710137636e1ab4f5417ec0ecb573-195549231");
-
-
+        return $vendasParaExcluir;
 
         if ($all == 'all'){
-
-            $vendas = Venda::orderby('id', 'desc')->get();
-
+            Venda::orderby('id', 'desc')->get();
         }else{
 
             $vendas = Venda::orderby('id', 'desc')->paginate(10);
