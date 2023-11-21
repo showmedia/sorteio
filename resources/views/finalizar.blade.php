@@ -82,6 +82,10 @@
  -->
     </div>
 
+    <div class="text-center" style="width: 100%">
+        obs: Caso não realize o pagamento em até 15 minutos, essa compra será cancelada.
+    </div>
+
    @endif
 
 </div>

@@ -30,7 +30,9 @@
 
                             Você esta adquirindo {{count($venda->cotas)}} cota(s) para o sorteio <b>"{{$venda->sorteio->name}}"</b>. 
 
-                            Confira suas cotas abaixo e preencha seus dados.
+                            Confira suas cotas abaixo e preencha seus dados. <br>
+                            <br>
+                            obs: Seus números já estão reservados, continue para confirmar sua compra, caso não realize o pagamento em até 15 minutos, essa compra será cancelada.
 
                         </div>
 
