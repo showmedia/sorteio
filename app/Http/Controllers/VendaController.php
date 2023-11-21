@@ -389,7 +389,13 @@ $disponiveis = array_values($disponiveis);
         ->where('created_at', '<', $limiteTempo)
         ->get();
 
-        return $vendasParaExcluir;
+        // Exclui as vendas que atendem aos critérios
+        foreach ($vendasParaExcluir as $venda) {
+            foreach($venda->cotas as $c){
+                $c->delete();
+            }
+            $venda->delete();
+        }
 
         if ($all == 'all'){
             Venda::orderby('id', 'desc')->get();
