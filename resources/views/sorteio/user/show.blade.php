@@ -165,7 +165,13 @@
         </div>
 
          <div class="maior-compra bg-primary text-white" style="width:100%; padding:3px; text-align:center; margin-top:3px;">
-            <strong>Top comprador: </strong> {{$userName ?? ''}} @auth @if(Auth::user()->nivel == 1) - {{$qtntop ?? ''}} @endif @endauth
+            <strong>Top comprador </strong> <br>
+                @php $contador = 1; @endphp
+                @foreach($top3 as $top)
+                    {{$contador}}° lugar - {{$top->name}} <br>
+                    @php $contador++; @endphp
+                @endforeach
+            {{$userName ?? ''}} @auth @if(Auth::user()->nivel == 1) - {{$qtntop ?? ''}} @endif @endauth
         </div>
 
 

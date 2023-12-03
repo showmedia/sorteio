@@ -213,22 +213,26 @@ class SorteioController extends Controller
             ->where('users.id', '!=', 1)
             ->groupBy('users.id')
             ->orderByRaw('SUM(vendas.quantidade) DESC')
-            ->first();
+            ->take(3) // Adiciona esta linha para obter os top 3
+            ->get();
 
-            
-        if ($usuarioQueMaisComprou) {
-            // O usuário que mais comprou cotas no sorteio de ID 38 foi encontrado
-            // Você pode acessar as informações do usuário usando $usuarioQueMaisComprou
-            $userId = $usuarioQueMaisComprou->id;
-            $userName = $usuarioQueMaisComprou->name;
-            $quantidadeComprada = $usuarioQueMaisComprou->quantidade_total; // Esta coluna não existe, apenas para ilustração
+if ($usuariosQueMaisCompraram->count() > 0) {
+    // Pelo menos um usuário que mais comprou cotas foi encontrado
+    foreach ($usuariosQueMaisCompraram as $usuario) {
+        // Você pode acessar as informações do usuário usando $usuario
+        $userId = $usuario->id;
+        $userName = $usuario->name;
+        $quantidadeComprada = $usuario->quantidade_total; // Esta coluna não existe, apenas para ilustração
 
-            // Faça o que precisar com as informações do usuário que mais comprou
-        } else {
-            // Nenhum usuário encontrado para o sorteio de ID 38
-        }
+        // Faça o que precisar com as informações do usuário que mais comprou
+        $userNames[] = $userName;
+        $quantidadesCompradas[] = $quantidadeComprada;
+    }
+} else {
+    // Nenhum usuário encontrado para o sorteio de ID $id
+}
 
-        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'userName' => $userName, 'qtntop' => $quantidadeComprada]);
+        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'top3' => $usuariosQueMaisCompraram, 'qtntop' => $quantidadeComprada]);
 
     }
 
