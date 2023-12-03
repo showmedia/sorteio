@@ -218,7 +218,7 @@ class SorteioController extends Controller
 
 if ($usuarioQueMaisComprou->count() > 0) {
     // Pelo menos um usuário que mais comprou cotas foi encontrado
-    foreach ($usuariosQueMaisCompraram as $usuario) {
+    foreach ($usuarioQueMaisComprou as $usuario) {
         // Você pode acessar as informações do usuário usando $usuario
         $userId = $usuario->id;
         $userName = $usuario->name;
