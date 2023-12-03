@@ -216,23 +216,22 @@ class SorteioController extends Controller
             ->take(3) // Adiciona esta linha para obter os top 3
             ->get();
 
-if ($usuariosQueMaisCompraram->count() > 0) {
+if ($usuarioQueMaisComprou->count() > 0) {
     // Pelo menos um usuário que mais comprou cotas foi encontrado
     foreach ($usuariosQueMaisCompraram as $usuario) {
         // Você pode acessar as informações do usuário usando $usuario
         $userId = $usuario->id;
         $userName = $usuario->name;
-        $quantidadeComprada = $usuario->quantidade_total; // Esta coluna não existe, apenas para ilustração
 
         // Faça o que precisar com as informações do usuário que mais comprou
         $userNames[] = $userName;
-        $quantidadesCompradas[] = $quantidadeComprada;
+   
     }
 } else {
     // Nenhum usuário encontrado para o sorteio de ID $id
 }
 
-        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'top3' => $usuariosQueMaisCompraram, 'qtntop' => $quantidadeComprada]);
+        return view('sorteio.user.show',['sorteio' => $sorteio, 'max' => $maxTotal, 'top3' => $usuarioQueMaisComprou, 'qtntop' => $quantidadeComprada]);
 
     }
 
