@@ -213,7 +213,7 @@ class SorteioController extends Controller
             ->where('users.id', '!=', 1)
             ->groupBy('users.id')
             ->orderByRaw('SUM(vendas.quantidade) DESC')
-            ->take(3) // Adiciona esta linha para obter os top 3
+            ->take(5) // Adiciona esta linha para obter os top 3
             ->get();
 
 if ($usuarioQueMaisComprou->count() > 0) {
