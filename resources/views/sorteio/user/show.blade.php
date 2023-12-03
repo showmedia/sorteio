@@ -168,7 +168,7 @@
             <strong>Top comprador </strong> <br>
                 @php $contador = 1; @endphp
                 @foreach($top3 as $top)
-                    {{$contador}}° lugar - {{$top->name ?? ''}} <br>
+                    @if($contador == 1) 👑 @endif {{$contador}}° lugar - {{$top->name ?? ''}} <br>
                     @php $contador++; @endphp
                 @endforeach
         </div>
