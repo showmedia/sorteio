@@ -395,6 +395,12 @@ $disponiveis = array_values($disponiveis);
                 $c->delete();
             }
             $venda->delete();
+
+            $sorteio = Sorteio::findOrFail($venda->sorteio->id);
+
+            $sorteio->qtnVenda = $sorteio->qtnVenda - count($venda->cotas);
+
+            $sorteio->update();
         }
 
         if ($all == 'all'){
