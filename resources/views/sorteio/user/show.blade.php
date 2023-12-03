@@ -168,10 +168,9 @@
             <strong>Top comprador </strong> <br>
                 @php $contador = 1; @endphp
                 @foreach($top3 as $top)
-                    {{$contador}}° lugar - {{$top->name}} <br>
+                    {{$contador}}° lugar - {{$top->name ?? ''}} <br>
                     @php $contador++; @endphp
                 @endforeach
-            {{$userName ?? ''}} @auth @if(Auth::user()->nivel == 1) - {{$qtntop ?? ''}} @endif @endauth
         </div>
 
 
