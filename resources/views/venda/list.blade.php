@@ -19,9 +19,11 @@
     @if($v->sorteio->status == 0)
     <div class="venda"> 
 
+<b>ID: </b> {{$v->id}} <br>
+
 <b>Data: </b> {{ date('d/m/Y - H:i', strtotime($v->created_at))}} <br>
 
-<b>Nome: </b> {{$v->user->name}} <br>
+<b>Nome: </b> {{$v->user->id}} - {{$v->user->name}} <br>
 
 <b>email: </b> {{$v->user->email}} <br>
 
