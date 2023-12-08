@@ -19,7 +19,7 @@
     @if($v->sorteio->status == 0)
     <div class="venda"> 
 
-<b>ID: </b> {{$v->id}} <br>
+<b>ID: </b> {{$v->id}}  <br>
 
 <b>Data: </b> {{ date('d/m/Y - H:i', strtotime($v->created_at))}} <br>
 
