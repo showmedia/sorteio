@@ -33,7 +33,7 @@
 
 <b>Quantidade de cotas: </b>  {{$v->quantidade}} <br>
 
-<b>Cotas: </b> @foreach($v->cotas as $cota) @if($cota->number == 5555 || $cota->number == 9999 || $cota->number == 7777 || $cota->number == 3333 || $cota->number == 1111) <span class="bg-success text-white">@endif @if($v->sorteio->tipo == 0) {{sprintf("%04s",$cota->number)}}, @else {{sprintf("%04s",$cota->number)}}, @endif @if($cota->number == 5555 || $cota->number == 9999 || $cota->number == 7777 || $cota->number == 3333 || $cota->number == 1111)  </span> @endif @endforeach <br>
+<b>Cotas: </b> @foreach($v->cotas as $cota) @if($cota->number == 9443 || $cota->number == 4570 || $cota->number == 1163 || $cota->number == 5217 || $cota->number == 4500) <span class="bg-success text-white">@endif @if($v->sorteio->tipo == 0) {{sprintf("%04s",$cota->number)}}, @else {{sprintf("%04s",$cota->number)}}, @endif @if($cota->number == 9443 || $cota->number == 4570 || $cota->number == 1163 || $cota->number == 5217 || $cota->number == 4500)  </span> @endif @endforeach <br>
 
 <b>Status: </b> @if($v->status == 0) Pendente @else Pago @endif <br>
 
